@@ -1,0 +1,83 @@
+<h1 align='center'>News</h1>
+<p><h2 class="realty" align='left'>Hot news:</h2></p>
+<ul><li>president resign</li>
+    <li>why do you learn JS</li>
+    <li>The price of the oil wil be grown up</li>
+</ul>
+<link href="https://fonts.googleapis.com/css?family=Lobster"
+rel="stylesheet" type="text/css">
+<p><h2 class='hot'>Fresh news:</h2></p>
+<p>Что лучше изучать?</p>
+<form><label><input type="checkbox" name="learning">JS</label></form>
+<form><label><input type="checkbox" name='learning'> c++</label></form>
+<form><label><input type="checkbox" name="learning">java</label></form>
+<br></br>
+<p>Как часто вы изучаете JS?</p>
+<label><input type="radio"  name='choice'>очень часто</label>
+<label><input type="radio" name='choice'>иногда</label>
+<label><input type="radio" name='choice'>редко</label>
+<ul>
+
+    <li><a href='page2.html' class='cold'> Парламент Северной Ирландии возобновит работу </a></li>
+<li><a href='https://support.microsoft.com/ru-kz/help/928847/internet-explorer-uses-the-wrong-character-set-when-it-renders-an-html' class="cold">Спортивные итоги 2019 года</a></li>
+</ul>
+<div class='slider'>
+<button id='prev-image'> < </button>
+<img class='image-cars' id='slide-image' src=""  />
+<button id='next-image'> > </button>
+</div>
+<audio id="music" controls>
+<source src="https://z1.fm/song/22813125" type="audio/mpeg"/>
+</audio>
+<style>
+li{padding: 10px;
+font-size: 20px;
+color: indianred;}
+a{color: aqua;
+font-style: italic;}
+.hot{background-color: aqua;}
+.realty{background-color: blueviolet;}
+.cold:hover{color:forestgreen;}
+.slider {float:center;
+
+    margin-left: 30%;
+    margin-right: auto;
+    height: 50%;
+    display: block;}
+    .slider.image-cars{max-width: 50%;}
+    h2 {font-family:Lobster;}
+</style>
+<script>
+
+    
+var showPrevImage=document.getElementById('prev-image');
+ var showNextImage=document.getElementById('next-image');
+ var slideImage=document.getElementById('slide-image');
+ 
+    showPrevImage.addEventListener('click',onShowPrevImageClick);
+    showNextImage.addEventListener('click',onShowNextImageClick);
+    var imageUrl=[];
+   imageUrl.push('car1.jpg');
+imageUrl.push('car2.jpg');
+imageUrl.push('car3.jpg');
+imageUrl.push('car4.jpg');
+var currentImageIndex=0;
+slideImage.src=imageUrl[currentImageIndex];
+showPrevImage.disabled=true;
+   function onShowPrevImageClick() {
+       currentImageIndex--;
+       slideImage.src=imageUrl[currentImageIndex];
+       showNextImage.disabled=false;
+       if(currentImageIndex===0){showPrevImage.disabled=true;}
+       
+   }
+   function onShowNextImageClick() {
+    currentImageIndex++;
+       slideImage.src=imageUrl[currentImageIndex];
+       showPrevImage.disabled=false;
+       if(currentImageIndex===(imageUrl.length-1)){showNextImage.disabled=true;}
+    }
+    var numbers=[1,2,5];
+
+    document.write(numbers[0]+numbers[2]);
+</script>
