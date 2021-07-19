@@ -1,9 +1,16 @@
 My name is Yegor Lesnichiy.
-My phine number is +375298069099. My email is "lesnichij94@mail.ru".
+My phone number is +375298069099. My email is "lesnichij94@mail.ru".
 I'm beginner front-end developer. I work engineer of communication. I like to work with technique and programm providing and other modern technologies.
-I learn JS, html 5, css3, work with git&github.
-<span>value1<input name="value1" id="value1" type="number"></span>
-<span>value2<input type="number" id="value2"></span>
+I learn JS, html 5, css3, work with git&github, I'm learning node.js too.
+Now I show simple example of my code:
+<span>
+   value1
+   <input name="value1" id="value1" type="number">
+</span>
+<span>
+   value2
+   <input type="number" id="value2">
+</span>
 <p>
    <label> <input type="button" value="+" id="plus">
     <input type="button" value="-" id="minus">
